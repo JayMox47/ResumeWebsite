@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
                 <a
                   className="text-link resume-download"
-                  href="assets/jonathan-mox-resume.pdf"
+                  href="assets/jonathan-mox-resume-2026-09-15.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >

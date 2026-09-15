@@ -25,7 +25,8 @@ The static website is generated in `dist/client`. No database, server runtime, o
 - `app/projects/page.tsx`: the separate Projects page and NowSpinning link.
 - `app/globals.css`: colors, typography, layout, and responsive styles.
 - `app/layout.tsx`: page title and description.
-- `public/assets/jonathan-mox-resume.pdf`: downloadable resume.
+- `public/assets/jonathan-mox-resume-2026-09-15.pdf`: downloadable resume,
+  exported from the September 15, 2026 Word document.
 - `public/assets/jonathan-mox.png`: portrait.
 
 Content is based on the resume hosted on jonathanmox.com on September 8, 2026. The LinkedIn URL was supplied separately. The existing resume and portrait are preserved. Confirm employment dates, GPA, and new accomplishments when updating the site.
