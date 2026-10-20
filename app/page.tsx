@@ -22,9 +22,22 @@ const socials = [
 ];
 const experience = [
   {
+    company: 'Penn State University',
+    role: 'Learning Assistant',
+    date: 'Aug 2026 — Present',
+    location: 'University Park, PA',
+    arrangement: 'Part-time · On-site',
+    bullets: [
+      'Supported students during class activities, group work, and problem-solving.',
+      'Explained course concepts and answered questions from a student’s perspective.',
+      'Provided feedback and guidance while helping students develop independent problem-solving skills.',
+    ],
+  },
+  {
     company: 'Central Integrations',
     role: 'Network Analyst',
     date: 'May 2024 — Present',
+    location: 'Pittsburgh, PA',
     bullets: [
       'Supported device management, maintenance, and repair across 50+ schools and businesses.',
       'Maintained client device inventories and assisted with inventory audits.',
@@ -36,6 +49,7 @@ const experience = [
     company: 'Plexus Parc',
     role: 'Infrastructure Support Technician',
     date: 'Sep 2023 — Sep 2025',
+    location: 'Pittsburgh, PA',
     bullets: [
       'Deployed production servers and maintained the data center to minimize its attack surface.',
       'Managed SSL/TLS certificates to help protect sensitive customer data.',
@@ -45,6 +59,7 @@ const experience = [
     company: 'Central Catholic High School',
     role: 'Junior IT Technician',
     date: 'Nov 2022 — May 2025',
+    location: 'Pittsburgh, PA',
     bullets: [
       'Created and deployed device images for students and faculty.',
       'Maintained inventories of servers, laptops, and mobile devices, along with spreadsheets for incoming student information.',
@@ -131,7 +146,10 @@ export default function Home() {
                 <article className="job" key={job.company}>
                   <div className="job-meta">
                     <p className="date">{job.date}</p>
-                    <p>Pittsburgh, PA</p>
+                    <p>{job.location}</p>
+                    {'arrangement' in job && (
+                      <p className="job-arrangement">{job.arrangement}</p>
+                    )}
                   </div>
                   <div className="job-content">
                     <h3>{job.role}</h3>

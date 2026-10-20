@@ -270,6 +270,11 @@ h2 {
   color: #6a7a88;
   margin-top: 4px;
 }
+.job-arrangement {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6a7a88;
+}
 h3 {
   font-size: 18px;
   font-weight: 600;
@@ -578,24 +583,41 @@ nav a[aria-current='page']::after {
   color: var(--muted-foreground);
   margin-top: 20px;
 }
-.project-entry {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  padding-block: 32px;
-  margin-top: 40px;
-  border-block: 1px solid var(--border);
-}
-.project-icon {
-  width: 54px;
-  height: 54px;
+.project-list {
   display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  color: var(--primary);
-  background: var(--muted);
+  gap: 28px;
+  margin-top: 40px;
+}
+.project-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  background: #f7fafd;
   border: 1px solid var(--border);
-  border-radius: 11px;
+  border-radius: 12px;
+}
+.project-preview {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #dbe4ec;
+  border-radius: 7px;
+  background: #eaf0f5;
+}
+.project-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+.project-preview:hover img {
+  transform: scale(1.025);
+}
+.project-copy {
+  padding-block: 10px;
 }
 .project-copy h2 {
   font-size: 28px;
@@ -641,7 +663,12 @@ nav a[aria-current='page']::after {
     padding-block: 38px;
   }
   .project-entry {
+    grid-template-columns: 1fr;
     gap: 16px;
+    padding: 16px;
+  }
+  .project-copy {
+    padding: 0 4px 6px;
   }
 }
 @media (max-width: 380px) {
@@ -651,8 +678,5 @@ nav a[aria-current='page']::after {
   .resume-portrait {
     width: 112px;
     height: 140px;
-  }
-  .project-entry {
-    flex-direction: column;
   }
 }
