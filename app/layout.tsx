@@ -13,6 +13,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="top">
+        <noscript>
+          <style>{`[data-reveal] { opacity: 1 !important; transform: none !important; }`}</style>
+        </noscript>
         {children}
         <ScrollReveal />
       </body>

@@ -59,7 +59,7 @@ export default function Home() {
           className="container home-experience section"
           aria-labelledby="work-heading"
         >
-          <div className="section-heading">
+          <div data-reveal="" className="section-heading">
             <div>
               <h2 id="work-heading">
                 Work experience<span className="accent">.</span>
@@ -72,6 +72,7 @@ export default function Home() {
           <div className="experience-preview">
             {experience.map((job, index) => (
               <Link
+                data-reveal=""
                 className="experience-preview-row"
                 href={`/experience/#job-${index}`}
                 key={job.role}
@@ -91,7 +92,7 @@ export default function Home() {
           className="container section home-projects"
           aria-labelledby="projects-heading"
         >
-          <div className="section-heading">
+          <div data-reveal="" className="section-heading">
             <div>
               <h2 id="projects-heading">
                 Things I’ve built<span className="accent">.</span>
@@ -103,7 +104,7 @@ export default function Home() {
           </div>
           <ProjectList />
         </section>
-        <section className="container contact-callout">
+        <section data-reveal="" className="container contact-callout">
           <div>
             <h2>
               Get in touch<span className="accent">.</span>

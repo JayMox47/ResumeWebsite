@@ -1483,3 +1483,19 @@ h3 {
     transform: none;
   }
 }
+
+/* Static HTML starts in the same state as the entrance animation. This avoids
+   showing finished content and then rewinding it when hydration completes. */
+[data-reveal]:not([data-reveal-state='visible']) {
+  opacity: 0;
+  transform: translate3d(-24px, 76px, 0) scale(0.97);
+}
+[data-reveal]:focus-within {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce), print {
+  [data-reveal]:not([data-reveal-state='visible']) {
+    opacity: 1;
+    transform: none;
+  }
+}

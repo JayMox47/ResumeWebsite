@@ -13,7 +13,7 @@ export default function Projects() {
     <>
       <SiteHeader current="projects" />
       <main tabIndex={-1} id="main" className="container projects-main">
-        <div className="page-intro">
+        <div data-reveal="" className="page-intro">
           <h1>
             Things I’ve built<span className="accent">.</span>
           </h1>

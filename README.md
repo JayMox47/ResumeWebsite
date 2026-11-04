@@ -37,3 +37,9 @@ The content audit checks personal text, dates, links, and original asset hashes 
 The local development server uses framework client navigation. Static exports use native links because this Vinext version omits its client router runtime there. Headings and content share a single reveal controller with a per-element replay guard. Animations respect reduced-motion preferences, and content stays readable without JavaScript.
 
 The legacy GitHub Pages preparation helper remains available in `scripts/prepare-pages.mjs`; the primary custom domain is served by the existing Netlify deployment.
+
+## Static-host animation startup
+
+Reveal targets include `data-reveal` in server-rendered HTML. CSS establishes their starting opacity and transform before hydration, so browsers cannot paint the finished content and then rewind it when JavaScript arrives. The controller waits two paint frames, allows project images to decode with a bounded timeout, and plays each entrance once. It releases animation layers afterward. Reduced-motion, print, unsupported-animation, and no-JavaScript paths show content without motion.
+
+Production-output navigation and reveal completion were checked in Brave and Safari. Build, TypeScript, and the 110-check content audit passed.

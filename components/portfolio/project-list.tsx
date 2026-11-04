@@ -8,7 +8,7 @@ export function ProjectList({
   return (
     <div className="project-list">
       {projects.map((project, index) => (
-        <article className="project-entry" key={project.name}>
+        <article data-reveal="" className="project-entry" key={project.name}>
           <a
             className={`project-preview project-${index}`}
             href={project.url}

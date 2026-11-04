@@ -12,7 +12,7 @@ export default function Experience() {
     <>
       <SiteHeader current="experience" />
       <main tabIndex={-1} id="main" className="experience-main">
-        <div className="container page-intro">
+        <div data-reveal="" className="container page-intro">
           <h1>
             Experience<span className="accent">.</span>
           </h1>
@@ -43,12 +43,17 @@ export default function Experience() {
         </div>
         <section className="experience-section" id="experience">
           <div className="container section">
-            <div className="section-heading">
+            <div data-reveal="" className="section-heading">
               <h2>Work Experience</h2>
             </div>
             <div className="experience-list">
               {experience.map((job, index) => (
-                <article className="job" id={`job-${index}`} key={job.role}>
+                <article
+                  data-reveal=""
+                  className="job"
+                  id={`job-${index}`}
+                  key={job.role}
+                >
                   <div className="job-meta">
                     <p className="date">{job.date}</p>
                     <p>{job.location}</p>
@@ -71,10 +76,10 @@ export default function Experience() {
           </div>
         </section>
         <section className="section container" id="leadership">
-          <div className="section-heading">
+          <div data-reveal="" className="section-heading">
             <h2>Leadership Experience</h2>
           </div>
-          <article className="job">
+          <article data-reveal="" className="job">
             <div className="job-meta">
               <p className="date">May 2026 — Present</p>
               <p>Pittsburgh, PA</p>
@@ -91,7 +96,7 @@ export default function Experience() {
               </ul>
             </div>
           </article>
-          <article className="job">
+          <article data-reveal="" className="job">
             <div className="job-meta">
               <p className="date">May 2023 — May 2025</p>
               <p>Pittsburgh, PA</p>
@@ -122,10 +127,10 @@ export default function Experience() {
           </article>
         </section>
         <section className="section container education-section" id="education">
-          <div className="section-heading">
+          <div data-reveal="" className="section-heading">
             <h2>Education</h2>
           </div>
-          <article className="job">
+          <article data-reveal="" className="job">
             <div className="job-meta">
               <p className="date">Expected May 2029</p>
               <p>State College, PA</p>
@@ -140,7 +145,7 @@ export default function Experience() {
               </p>
             </div>
           </article>
-          <article className="job">
+          <article data-reveal="" className="job">
             <div className="job-meta">
               <p className="date">May 2025</p>
               <p>Pittsburgh, PA</p>
@@ -152,11 +157,11 @@ export default function Experience() {
           </article>
         </section>
         <section className="section container education-section" id="skills">
-          <div className="section-heading">
+          <div data-reveal="" className="section-heading">
             <h2>Technical Skills</h2>
           </div>
           <dl className="resume-skills">
-            <div>
+            <div data-reveal="">
               <dt>Infrastructure & support</dt>
               <dd className="skill-tags">
                 <span className="skill-tag">Wireless networking</span>
@@ -169,7 +174,7 @@ export default function Experience() {
                 <span className="skill-tag">device deployment</span>
               </dd>
             </div>
-            <div>
+            <div data-reveal="">
               <dt>Tools & platforms</dt>
               <dd className="skill-tags">
                 <span className="skill-tag">Hyper-V</span>
@@ -179,7 +184,7 @@ export default function Experience() {
                 <span className="skill-tag">inventory management</span>
               </dd>
             </div>
-            <div>
+            <div data-reveal="">
               <dt>Programming & web</dt>
               <dd className="skill-tags">
                 <span className="skill-tag">Python</span>
